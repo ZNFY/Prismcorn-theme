@@ -17,4 +17,9 @@
             </div>
         </div>
     </div>
+    <?php if ($this->user->hasLogin()): ?>
+        <div class="d-grid mt-2">
+            <a href="<?php $this->options->adminUrl(); ?>" class="btn btn-primary btn-sm">进入后台</a>
+        </div>
+    <?php endif; ?>
 </div>

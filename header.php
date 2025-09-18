@@ -37,6 +37,11 @@
                 </li>
                 <?php endwhile; ?>
             </ul>
+            <button class="btn btn-sm btn-outline-secondary me-2" id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+                </svg>
+            </button>
             <form class="d-flex" method="post" action="<?php $this->options->siteUrl(); ?>">
                 <input class="form-control form-control-sm me-2" type="search" name="s" placeholder="Search" aria-label="Search">
                 <button class="btn btn-sm btn-outline-secondary" type="submit">Search</button>
