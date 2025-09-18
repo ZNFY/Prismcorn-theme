@@ -8,6 +8,64 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const tocCard = document.getElementById('toc-card');
+    const tocList = document.getElementById('toc-list');
+    const postContent = document.querySelector('.post-full .post-content');
+
+    if (!postContent || !tocList) return;
+
+    const headings = postContent.querySelectorAll('h2, h3');
+    if (headings.length < 2) return; // Only show TOC if there are enough headings
+
+    headings.forEach((heading, index) => {
+        const id = 'toc-heading-' + index;
+        heading.setAttribute('id', id);
+
+        const listItem = document.createElement('li');
+        const link = document.createElement('a');
+        link.setAttribute('href', '#' + id);
+        link.textContent = heading.textContent;
+
+        // Indent H3 titles
+        if (heading.tagName === 'H3') {
+            listItem.style.paddingLeft = '1.5rem';
+        }
+
+        listItem.appendChild(link);
+        tocList.appendChild(listItem);
+    });
+
+    tocCard.style.display = 'block'; // Show the TOC card
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('pre').forEach(function(pre) {
+        const code = pre.querySelector('code');
+        if (!code) return;
+
+        const button = document.createElement('button');
+        button.className = 'copy-code-button';
+        button.textContent = 'Copy';
+        pre.appendChild(button);
+
+        button.addEventListener('click', function() {
+            navigator.clipboard.writeText(code.innerText).then(function() {
+                button.textContent = 'Copied!';
+                setTimeout(function() {
+                    button.textContent = 'Copy';
+                }, 2000);
+            });
+        });
+    });
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
 
 <?php $this->footer(); ?>
 </body>

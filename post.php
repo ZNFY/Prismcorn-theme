@@ -30,6 +30,12 @@ $this->need('header.php');
         </main>
 
         <aside class="col-lg-3 d-none d-lg-block">
+            <div class="card mb-4 sticky-top" id="toc-card" style="display: none;">
+                <div class="card-header">Table of Contents</div>
+                <div class="card-body">
+                    <ul id="toc-list" class="list-unstyled"></ul>
+            </div>
+        </div>
              <?php $this->need('sidebar.php'); ?>
         </aside>
     </div>

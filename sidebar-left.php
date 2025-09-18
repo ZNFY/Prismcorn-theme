@@ -8,8 +8,12 @@
             <p class="card-text text-muted"><?php $this->options->description() ?></p>
             
             <div class="social-links">
-                <a href="#" class="btn btn-sm btn-outline-secondary m-1">GitHub</a>
-                <a href="#" class="btn btn-sm btn-outline-secondary m-1">Twitter</a>
+                <?php if ($this->options->githubUrl): ?>
+                    <a href="<?php $this->options->githubUrl(); ?>" class="btn btn-sm btn-outline-secondary m-1">GitHub</a>
+                <?php endif; ?>
+                <?php if ($this->options->twitterUrl): ?>
+                    <a href="<?php $this->options->twitterUrl(); ?>" class="btn btn-sm btn-outline-secondary m-1">Twitter</a>
+                <?php endif; ?>
             </div>
         </div>
     </div>
