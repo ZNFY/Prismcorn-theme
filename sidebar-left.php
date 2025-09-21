@@ -3,7 +3,11 @@
 <div class="sidebar-inner sticky-top">
     <div class="card text-center">
         <div class="card-body">
-            <img src="https://secure.gravatar.com/avatar/?s=150&d=mm" class="rounded-circle mb-3" alt="Avatar" width="120" height="120">
+            <?php
+            $gravatarHash = '*************************';
+            $gravatarUrl = 'https://secure.gravatar.com/avatar/' . $gravatarHash . '?s=120&d=mm';
+            ?>
+            <img src="<?php echo $gravatarUrl; ?>" class="rounded-circle mb-3" alt="Avatar" width="120" height="120">
             <h5 class="card-title"><?php $this->author->screenName(); ?></h5>
             <p class="card-text text-muted"><?php $this->options->description() ?></p>
             
