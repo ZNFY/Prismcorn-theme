@@ -7,6 +7,22 @@
     </div>
 </footer>
 
+<a href="#" id="back-to-top" class="btn btn-primary rounded-circle shadow">&uarr;</a>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var backToTopBtn = document.getElementById('back-to-top');
+
+    window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    };
+});
+</script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
