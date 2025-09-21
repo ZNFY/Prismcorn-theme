@@ -14,8 +14,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
-    <link href="https://fonts.loli.net/css2?family=Montserrat:wght@700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
+    <link href="https://fonts.loli.net/css2?family=Montserrat:wght@700&family=Noto+Sans+SC:wght@400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">    <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
 
     <?php $this->header(); ?>
 </head>
@@ -30,7 +29,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                  <li class="nav-item">
-                    <a class="nav-link<?php if($this->is('index')): ?> active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>">Home</a>
+                    <a class="nav-link<?php if($this->is('index')): ?> active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>">主页</a>
                 </li>
                 <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
                 <?php while($pages->next()): ?>
