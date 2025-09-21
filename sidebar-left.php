@@ -4,7 +4,7 @@
     <div class="card text-center">
         <div class="card-body">
             <?php
-            $gravatarHash = '15d917ca7739095d50cf3bfb7686d800';
+            $gravatarHash = '********************';
             $gravatarUrl = 'https://secure.gravatar.com/avatar/' . $gravatarHash . '?s=120&d=mm';
             ?>
             <img src="<?php echo $gravatarUrl; ?>" class="rounded-circle mb-3" alt="Avatar" width="120" height="120">
