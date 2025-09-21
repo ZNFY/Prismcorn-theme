@@ -39,13 +39,16 @@ body {
 }
 
 /* Post Cards */
-.post-card {
-    border: 1px solid #e9ecef;
-    transition: box-shadow 0.2s ease-in-out;
+.post-card, .card {
+    border: 1px solid #f0f0f0; /* 更浅的边框 */
+    border-radius: 8px; /* 更圆润的边角 */
+    box-shadow: 0 2px 4px rgba(0,0,0,.05); /* 更柔和的阴影 */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-.post-card:hover {
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+.post-card:hover, .card:hover {
+    transform: translateY(-5px); /* 鼠标悬停时轻微上浮 */
+    box-shadow: 0 4px 12px rgba(0,0,0,.1); /* 更明显的阴影 */
 }
 
 .post-title a {
